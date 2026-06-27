@@ -100,7 +100,7 @@ def main():
         return
     
     # Check files
-    if not check_file("AnyKernel3/version"):
+    if not check_file("AnyKernel3/anykernel.sh"):
         popen_impl(['git', 'submodule', 'update', '--init'])
     if not check_file("toolchain"):
         print(f"Please make toolchain available at {os.getcwd()}")
@@ -162,8 +162,7 @@ def main():
         'tools/ak3-core.sh',
         'tools/busybox',
         'tools/magiskboot',
-        'anykernel.sh',
-        'version'])
+        'anykernel.sh'])
     newZipName = os.path.join(os.getcwd(), '..', zipname)
     try:
         os.remove(newZipName)
