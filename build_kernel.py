@@ -152,8 +152,8 @@ def main():
         kver = match_and_get(r'"([^"]+)"', f.read())
     
     shutil.copyfile('out/arch/arm64/boot/Image', 'AnyKernel3/Image')
-    zipname = 'GrassKernel_{}_{}_{}.zip'.format(
-        args.target, variantStr, datetime.today().strftime('%Y-%m-%d'))
+    zipname = 'Kernel-v{}_{}_{}_{}.zip'.format(
+        kver, args.target, variantStr, datetime.today().strftime('%Y-%m-%d'))
     os.chdir('AnyKernel3/')
     zip_files(zipname, [
         'Image', 
