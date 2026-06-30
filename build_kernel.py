@@ -111,11 +111,9 @@ def main():
     
     # Print info
     print_dictinfo({
-        'TARGET_KERNEL': 'Grass',
         'TARGET_VARIANT': variantStr,
         'TARGET_DEVICE': args.target,
         'TARGET_INCLUDES_KSU': not args.no_ksu,
-        'TARGET_USES_LLVM': True,
         'TOOLCHAIN': CompilerClang.get_version(),
     })
     
